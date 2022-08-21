@@ -8,7 +8,7 @@ var E = ["Hessini","Cox","Okeke"];
 var F = ["Marguerite Hessini","Scarlette Cox","Jim Okeke"];
 
 //loop for create and load link    
-for (i=0;i<emp.length;i++){  
+for (i=0;i<A.length;i++){  
 
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { var tab = tabs[0]; chrome.tabs.update(tab.id, {url: 'https://www.truepeoplesearch.com/resultaddress?streetaddress=${A[i]}&citystatezip=${B[i]}%2C%20${C[i]}&page=1'
 
