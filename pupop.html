@@ -1,0 +1,33 @@
+<script>  
+
+var i;  
+var A = ["16 Drummond Ct" ,"916 Hale St" , "305 Shalimar Dr"];  
+var B = ["Durham","Durham","Durham"]; 
+var C = ["NC","NC","NC"]; 
+var D = ["Marguerite","Scarlette","Jim"]; 
+var E = ["Hessini","Cox","Okeke"];
+var F = ["Marguerite Hessini","Scarlette Cox","Jim Okeke"];
+
+    
+for (i=0;i<emp.length;i++){  
+
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { var tab = tabs[0]; chrome.tabs.update(tab.id, {url: 'https://www.truepeoplesearch.com/resultaddress?streetaddress=${A[i]}&citystatezip=${B[i]}%2C%20${C[i]}&page=1'
+
+}); });
+
+
+var items = document.body.getElementsByTagName("*");
+for (var i = 0; i < items.length; ++i) {
+    if ((items[0].textContent.includes(D) ||(items[0].textContent.includes(E))||(items[0].textContent.includes(F))) {
+        items[0].click();
+    }
+}
+
+}  
+</script>  
+
+
+
+
+
+
